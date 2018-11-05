@@ -7,9 +7,9 @@ const cerberusTarget = {
   heads: {
     left: 'veltesta',
     center: 'tretesta',
-    right: 'drittesta'
-  }
-}
+    right: 'drittesta',
+  },
+};
 
 const cerberusSource = {
   id: 666,
@@ -18,9 +18,9 @@ const cerberusSource = {
   foes: {
     foe1: 'Hermes',
     foe2: 'Heracles',
-    foe3: 'Orpheus'
-  }
-}
+    foe3: 'Orpheus',
+  },
+};
 
 const cerberus = merge(cerberusSource, cerberusTarget);
 console.log('Merged', cerberus);

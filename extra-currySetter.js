@@ -9,7 +9,7 @@ const setUncurried = (user, userProperty, propertyValue) => {
   const updatedUser = { ...user };
   if (Object.keys(updatedUser).includes(userProperty)) updatedUser[userProperty] = propertyValue;
   return updatedUser;
-}
+};
 
 const julia2 = { name: 'Julia', surname: 'Álvarez', age: 19 };
 const updatedJulia = setUncurried(julia2, 'age', 25);
@@ -28,12 +28,11 @@ console.log('Same object?', julia2 === updatedJulia); // false
 // el objeto y el valor y sepan qué propiedad actualizar.
 // Si quieres puedes extraer la firma de la interfaz sin ponerla en línea con la implementación.
 
-const set = (userProperty) => (user, propertyValue) => {
+const set = userProperty => (user, propertyValue) => {
   const updatedUser = { ...user };
-  if (Object.keys(updatedUser).includes(userProperty))
-    updatedUser[userProperty] = propertyValue;
+  if (Object.keys(updatedUser).includes(userProperty)) updatedUser[userProperty] = propertyValue;
   return updatedUser;
-}
+};
 
 const setName = set('name');
 const setSurname = set('surname');
@@ -44,4 +43,3 @@ console.log('2. Curried function');
 console.log(setName(julia, 'Ana')); // { name: 'Ana', surname: 'Álvarez', age: 19 };
 console.log(setSurname(julia, 'González')); // { name: 'Julia', surname: 'González', age: 19 };
 console.log(setAge(julia, 25)); // { name: 'Julia', surname: 'Álvarez', age: 25 }
-
