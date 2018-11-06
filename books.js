@@ -1,4 +1,4 @@
-//He modificado el tsconfig.json incorporando "lib": es2015 para usar el método find().
+//Modified tsconfig.json to add "lib": es2015 to use find() method without 'tsc' warnings.
 function isBookRead(books, titleToSearch) {
     var book = books.find(function (book) { return book.title === titleToSearch; });
     return book === undefined ? false : book.isRead;

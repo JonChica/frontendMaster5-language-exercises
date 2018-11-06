@@ -1,3 +1,4 @@
+// Shallow merge, for deep merge, it's better to use lodash '_merge' over a clone of source
 const merge = (source, target) => ({ ...target, ...source });
 
 const cerberusTarget = {

@@ -1,4 +1,4 @@
-//He modificado el tsconfig.json incorporando "lib": es2015 para usar el método find().
+//Modified tsconfig.json to add "lib": es2015 to use find() method without 'tsc' warnings.
 
 interface Book {
   title: string;
