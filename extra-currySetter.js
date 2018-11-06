@@ -1,13 +1,17 @@
 // --- EJERCICIO ------------------------------------------------------------------------
 
-// En un formulario tenemos un objeto con los campos name, surname y age que representan un usuario. Crea una función "set"
-// que reciba un objeto con los campos de usuario, el nombre de una propiedad y su valor y actualice la propiedad de objeto
+// En un formulario tenemos un objeto con los campos name, surname y age que representan un usuario.
+// Crea una función "set"
+// que reciba un objeto con los campos de usuario, el nombre de una propiedad y su valor y
+// actualice la propiedad de objeto
 // con el valor pasado como argumento. El ejercicio debe de seguir las siguientes normas:
 // 1. La función debe ser pura, es decir, debe crear un nuevo objeto sin modificar el existente.
 
 const setUncurried = (user, userProperty, propertyValue) => {
   const updatedUser = { ...user };
-  if (Object.keys(updatedUser).includes(userProperty)) updatedUser[userProperty] = propertyValue;
+  if (Object.keys(updatedUser).includes(userProperty)) {
+    updatedUser[userProperty] = propertyValue;
+  }
   return updatedUser;
 };
 
@@ -22,15 +26,17 @@ console.log('Same object?', julia2 === updatedJulia); // false
 
 // --- OPCIONAL ------------------------------------------------------------------------
 
-// Currifica dicha función para que permita crear funciones donde el argumento del nombre de la propiedad
-// esté configurado previamente.
-// Es decir, modifica la función "set" para poder crear "setName", "setSurname" y "setAge" que reciban sólo
-// el objeto y el valor y sepan qué propiedad actualizar.
+// Currifica dicha función para que permita crear funciones donde el argumento del nombre de la
+// propiedad esté configurado previamente.
+// Es decir, modifica la función "set" para poder crear "setName", "setSurname" y "setAge" que
+// reciban sólo el objeto y el valor y sepan qué propiedad actualizar.
 // Si quieres puedes extraer la firma de la interfaz sin ponerla en línea con la implementación.
 
 const set = userProperty => (user, propertyValue) => {
   const updatedUser = { ...user };
-  if (Object.keys(updatedUser).includes(userProperty)) updatedUser[userProperty] = propertyValue;
+  if (Object.keys(updatedUser).includes(userProperty)) {
+    updatedUser[userProperty] = propertyValue;
+  }
   return updatedUser;
 };
 
